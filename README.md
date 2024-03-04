@@ -1,4 +1,6 @@
-# Advent-of-Code-2023
-My solutions to 2023's event of code in C#
+# Advent-of-Code
+These are my solutions to [advent of code](https://adventofcode.com)
 
 Well, they are not most proffessional nor most efficient, but hey, they work!
+
+Oh and I didn't manage to complete all days because life got in way.
