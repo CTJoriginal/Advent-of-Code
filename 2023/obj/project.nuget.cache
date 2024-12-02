@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "7hA+HF34t1wq/ZjIreimw8ITpKy8liiS8s0w0pCB7gPpVh4WvGGCOAkq21jLjYkVj8q+3oW/+elgsGEEVU01jw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cenet\\OneDrive - Univerza v Ljubljani\\Documents\\!Faks\\Advent-of-Code\\2023\\AoC_2023.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.2.0\\microsoft.extensions.caching.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.2.0\\microsoft.extensions.caching.memory.2.2.0.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.2.0\\microsoft.extensions.dependencyinjection.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.extensions.options\\2.2.0\\microsoft.extensions.options.2.2.0.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.recognizers.definitions\\1.8.8\\microsoft.recognizers.definitions.1.8.8.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.recognizers.text\\1.8.8\\microsoft.recognizers.text.1.8.8.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.recognizers.text.number\\1.8.8\\microsoft.recognizers.text.number.1.8.8.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\nuget.commandline\\5.9.3\\nuget.commandline.5.9.3.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\cenet\\.nuget\\packages\\vswhere\\2.8.4\\vswhere.2.8.4.nupkg.sha512"
+  ],
+  "logs": []
+}
