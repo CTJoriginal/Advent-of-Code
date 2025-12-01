@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cenet\\OneDrive - Univerza v Ljubljani\\Documents\\!Faks\\Advent-of-Code\\2023\\AoC_2023.csproj": {}
+    "C:\\Users\\cenet\\Documents\\Programi\\Advent-of-Code\\2023\\AoC_2023.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cenet\\OneDrive - Univerza v Ljubljani\\Documents\\!Faks\\Advent-of-Code\\2023\\AoC_2023.csproj": {
+    "C:\\Users\\cenet\\Documents\\Programi\\Advent-of-Code\\2023\\AoC_2023.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cenet\\OneDrive - Univerza v Ljubljani\\Documents\\!Faks\\Advent-of-Code\\2023\\AoC_2023.csproj",
+        "projectUniqueName": "C:\\Users\\cenet\\Documents\\Programi\\Advent-of-Code\\2023\\AoC_2023.csproj",
         "projectName": "AoC_2023",
-        "projectPath": "C:\\Users\\cenet\\OneDrive - Univerza v Ljubljani\\Documents\\!Faks\\Advent-of-Code\\2023\\AoC_2023.csproj",
+        "projectPath": "C:\\Users\\cenet\\Documents\\Programi\\Advent-of-Code\\2023\\AoC_2023.csproj",
         "packagesPath": "C:\\Users\\cenet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cenet\\OneDrive - Univerza v Ljubljani\\Documents\\!Faks\\Advent-of-Code\\2023\\obj\\",
+        "outputPath": "C:\\Users\\cenet\\Documents\\Programi\\Advent-of-Code\\2023\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
