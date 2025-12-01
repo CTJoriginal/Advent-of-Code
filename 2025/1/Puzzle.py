@@ -1,46 +1,43 @@
 import re
 
-with open("1/input.txt", "r") as inpt:
-    instructions = re.findall(r"(L|R)(\d+)", inpt.read())
-
-safe = 50
-safe_numbers = 99
+dial = 50
+dial_numbers = 99 + 1
 
 num_zeroes_p1 = 0
 num_zeroes_p2 = 0
 
-print(safe)
+with open("1/input.txt", "r") as inpt:
+    instructions = [[-1 if match[0] == "L" else 1, int(match[1])] for match in re.findall(r"(L|R)(\d+)", inpt.read())]
 
-for i in instructions:
-    prev_safe = safe
+for direction, distance in instructions:
+    prev_position = dial
+    rollover = False
     
-    direction = -1 if i[0] == "L" else 1
-    distance = int(i[1])
+    if distance > dial_numbers: # Handle multiple rotations of knob in same instruction
+        num_zeroes_p2 += distance // dial_numbers
+        distance = distance % dial_numbers
     
-    if distance > (safe_numbers + 1):
-        num_zeroes_p2 += distance // (safe_numbers + 1)
-        distance = distance % (safe_numbers + 1)
+    dial += direction * distance # Move dial
     
-    safe += direction * distance
-    
-    if safe > safe_numbers:        
-        safe = safe - (safe_numbers + 1); # Handle rollover
+    if dial > dial_numbers - 1:        
+        dial = dial - dial_numbers; # Handle rollover
+        rollover = True
         
-        if safe != 0 and prev_safe != 0:
-            num_zeroes_p2 += 1
-        
-    elif safe < 0:                
-        safe = (safe_numbers + 1) + safe; # Handle rollover
-
-        if safe != 0 and prev_safe != 0:
-            num_zeroes_p2 += 1
+    elif dial < 0:                
+        dial = dial_numbers + dial; # Handle rollover
+        rollover = True
     
-    if safe == 0:
-        num_zeroes_p1 += 1
-        
-    if safe == 0:
+    # Part 1
+    if dial == 0: 
+        num_zeroes_p1 += 1        
+    
+    # Part 2
+    if rollover and dial != 0 and prev_position != 0 or dial == 0:
         num_zeroes_p2 += 1
-    
+
+
+print("\n", "=" * 50, sep="")
 print(f"Part 1: {num_zeroes_p1}")
 print(f"Part 2: {num_zeroes_p2}")
+print("=" * 50,  sep="")
     
