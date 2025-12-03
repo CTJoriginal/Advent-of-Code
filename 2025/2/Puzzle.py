@@ -8,7 +8,7 @@ solution_2 = 0
 def SequenceDetector(num):
     arr = str(num)
     kernel = arr[:len(arr) // 2] # Pick first half of array
-    result = re.findall(f"{kernel}", arr)
+    result = re.findall(f"{kernel}", arr) # match repetitions of a kernel
     if len(arr) % 2 == 0 and len(result) * len(kernel) == len(arr):
         return True
     return False
@@ -20,14 +20,17 @@ def SequenceDetector2(num):
         result = re.findall(f"{kernel}", arr)
         if len(result) * len(kernel) == len(arr):
             return True
-    return False
+
 
 def SequenceDetectorOpt(num):
     arr = str(num)
-    result = re.match(r"^(.*)\1+$", arr) # This catches all repeating characters in a string
-    if result != None and arr == result[0]:
-            return True
-    return False
+    result = re.match(r"^(.*)\1+$", arr) # This matches all strings that are composed only of repeating characters
+    # ^ $ match must be from beginning to end
+    # (.*) Match any charatcers of any length
+    # \1+ match all repetitions of this group
+    if result != None and arr == result[0]: # if regex captures entire string, then it must be invalid
+        return True
+
 
 st = time.time()
 

@@ -6,7 +6,7 @@ dial_numbers = 99 + 1
 num_zeroes_p1 = 0
 num_zeroes_p2 = 0
 
-with open("1/input.txt", "r") as inpt:
+with open("2025/1/input.txt", "r") as inpt:
     instructions = [[-1 if match[0] == "L" else 1, int(match[1])] for match in re.findall(r"(L|R)(\d+)", inpt.read())]
 
 for direction, distance in instructions:
@@ -34,6 +34,9 @@ for direction, distance in instructions:
     # Part 2
     if rollover and dial != 0 and prev_position != 0 or dial == 0:
         num_zeroes_p2 += 1
+        
+    print(f"{"L" if direction == -1 else "R"}{distance:2} -> {dial}")
+    
 
 
 print("\n", "=" * 50, sep="")
