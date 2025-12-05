@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aTCGcQIMARg=",
+  "dgSpecHash": "tXINgOuwBRlwEpBjfxl37/iEbK/UD//5CGxgWu4qzecjOy3uX2qOwaXHiMtj7qJkoZKiQ6PqhKvIvHdYvnHsPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\cenet\\Documents\\Programi\\Advent-of-Code\\2023\\AoC_2023.csproj",
   "expectedPackageFiles": [
@@ -18,11 +18,7 @@
     "C:\\Users\\cenet\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
     "C:\\Users\\cenet\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
     "C:\\Users\\cenet\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\cenet\\.nuget\\packages\\vswhere\\2.8.4\\vswhere.2.8.4.nupkg.sha512",
-    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\cenet\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.22\\microsoft.netcore.app.host.win-x64.8.0.22.nupkg.sha512"
+    "C:\\Users\\cenet\\.nuget\\packages\\vswhere\\2.8.4\\vswhere.2.8.4.nupkg.sha512"
   ],
   "logs": []
 }

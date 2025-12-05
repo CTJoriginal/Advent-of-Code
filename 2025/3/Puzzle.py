@@ -2,7 +2,7 @@ import re
 import time
 import numpy as np
 
-solution_1 = 0, solution_2 = 0
+solution_1, solution_2 = 0, 0
 
 # Num batteries should be one less than actual number of digits in answer
 def yoltage(bank, solution = [], num_batteries = 2):
