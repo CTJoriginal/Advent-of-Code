@@ -28,11 +28,11 @@ for box_a in instalation:
 distances =  dict(sorted(distances.items(), key=lambda item: item[1]))
 keys = list(distances.keys())
 
-for i in range(10):
-    k = keys[i]
+# for i in range(10):
+#     k = keys[i]
 
-print(distances)
-print(distances.keys())
+# print(distances)
+# print(distances.keys())
 
 
 
@@ -46,7 +46,7 @@ for i in range(10):
 G = nx.from_numpy_array(graph)
 
 subgraphs = sorted([len(G.subgraph(c).copy()) for c in nx.connected_components(G)], reverse=True)
-solution_2 = np.prod(subgraphs[:1000])
+solution_2 = np.prod(subgraphs[:3])
 
 t = time.time() - st
 print("\n", "=" * 30, sep="")
