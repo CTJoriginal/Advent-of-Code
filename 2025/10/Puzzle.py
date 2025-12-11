@@ -64,29 +64,31 @@ def bfs(machine):
     print(f"Solution not found for machine {machine.lights}")
     return 0
 
-# for machine in machines:
-#     solution_1.append(bfs(machine))
+for machine in machines:
+    solution_1.append(bfs(machine))
 
 for machine in machines:
-    model = pulp.LpProblem("Yoltages", pulp.LpMinimize)
-    variables = [pulp.LpVariable(f"button_{i}", 0, cat="Integer") for i in range(len(machine.buttons))] # Variables that we optimise for
-
-    model += pulp.lpSum(variables), "Presses" # Solution we are searching for (minimal sum of variables)
+    n_buttons = len(machine.buttons)
+    n_yolts = len(machine.yoltages)
     
-    for i in range(len(machine.yoltages)):
-        print(i)
-     #  constraint = pulp.lpSum(   x_vars[j] for j in range(m)                    if i in buttons[j])            
-        constraint = pulp.lpSum(variables[j] for j in range(len(machine.buttons)) if i in machine.buttons[j])
-        model += constraint == machine.yoltages[i], f"Sum {i}"
+    model = pulp.LpProblem("Yoltage_config", pulp.LpMinimize)
+    n_i = [pulp.LpVariable(f"n_{i}", 0, cat="Integer") for i in range(n_buttons)]
+
+    # Minimise:
+    model += pulp.lpSum(n_i), "Total_presses"
+
+    # Subject to:
+    for i in range(n_yolts):
+        model += pulp.lpSum(n_i[b] * machine.buttons[b][i]for b in range(n_buttons)) == machine.yoltages[i]
+        # We need to write equation for each "collumn" separately
     
     model.solve()
+   
     if pulp.LpStatus[model.status] == "Optimal":
-        solution_2 += sum(int(pulp.value(var)) for var in variables)
+        solution_2 += sum(int(pulp.value(var)) for var in n_i)
     else: 
         print("SOLUTION NOT FOUND!")
-    print( sum(int(pulp.value(var)) for var in variables))
-    
-    
+
 time = time.time() - st
 
 print("\n", "=" * 50, sep="")
