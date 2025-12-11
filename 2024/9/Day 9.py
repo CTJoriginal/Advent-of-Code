@@ -54,3 +54,7 @@ for z, y in enumerate(fileArrayP1):
     checksum += z * y
 
 print("Part 1:", checksum)
+
+
+
+
