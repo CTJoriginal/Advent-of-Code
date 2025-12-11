@@ -2,8 +2,6 @@ import time
 import networkx as nx
 import numpy as np
 
-def GetKey(box_a, box_b):
-    return frozenset((tuple(box_a), tuple(box_b)))
 
 solution_1 = 0
 solution_2 = 0
@@ -15,42 +13,44 @@ nodes = {tuple(n): i for i, n in enumerate(instalation)}  # mapping node index -
 
 distances = {}
 
+G = nx.Graph()
+
+for box in instalation:
+    G.add_node(tuple(box))
+
+# nx.draw(G)
+# plt.show()
+
 # Compute distance between all pairs of boxes
 for box_a in instalation:
     for box_b in instalation:
-        # key = GetKey(box_a, box_b) # this is hashable AND order of elements doesn't matter
-        key = frozenset((nodes[tuple(box_a)], nodes[tuple(box_b)])) # this is hashable AND order of elements doesn't matter
+        key = frozenset((tuple(box_a), tuple(box_b))) # this is hashable AND order of elements doesn't matter
         if key in distances.keys() or np.array_equal(box_a, box_b):
             continue
-                
+
         distances[key] = np.linalg.norm(box_a - box_b)
 
-distances =  dict(sorted(distances.items(), key=lambda item: item[1]))
+distances = dict(sorted(distances.items(), key=lambda item: item[1]))
 keys = list(distances.keys())
 
-# for i in range(10):
-#     k = keys[i]
-
-# print(distances)
-# print(distances.keys())
-
-
-
-graph = np.zeros((len(nodes),len(nodes)))
-
-for i in range(10):
-    box_a, box_b = keys[i]
-    graph[box_a][box_b] = 1
-    graph[box_b][box_a] = 1
-
-G = nx.from_numpy_array(graph)
-
-subgraphs = sorted([len(G.subgraph(c).copy()) for c in nx.connected_components(G)], reverse=True)
-solution_2 = np.prod(subgraphs[:3])
-
+for i, pair in enumerate(keys):
+    box_a, box_b = pair
+    G.add_edge(box_a, box_b)
+    
+    if i == 999: # Part 1
+        subgraphs = sorted([len(G.subgraph(c).copy()) for c in nx.connected_components(G)], reverse=True)
+        solution_1 = np.prod(subgraphs[:3], dtype=object)
+        
+    if i % 1000 == 0:
+        print(f"Progress: {i}")
+    
+    if nx.number_connected_components(G) == 1: # Part 2
+        solution_2 = box_a[0] * box_b[0]
+        break
+    
 t = time.time() - st
 print("\n", "=" * 30, sep="")
-print(f"Part 1: {solution_1} - {solution_1 == 21}")
-print(f"Part 2: {solution_2} - {solution_2 == 40}")
+print(f"Part 1: {solution_1}")
+print(f"Part 2: {solution_2}")
 print("=" * 30,  sep="")
 print(f"t: {t:.4f} \n")
